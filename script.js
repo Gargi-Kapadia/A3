@@ -63,24 +63,25 @@ get.addEventListener('click', async (event) => {
 
 function callMovies(movieData) {
 document.getElementById('div1').innerHTML = "";
-const style = document.createElement('style')
-document.head.appendChild(style)
 
 const runtime = document.createElement("p")
 runtime.innerHTML = 'Runtime:' + movieData['runtime']
-document.getElementsByClassName('run');
+runtime.setAttribute('id', 'runtime');
 document.getElementById('div1').appendChild(runtime); 
  
 const overview = document.createElement("p");
 overview.innerHTML = '<b>Overview: </b>' + movieData['overview'];
+overview.setAttribute('id', 'overview');
 document.getElementById('div1').appendChild(overview);
   
 const img = document.createElement("img");
 img.src = 'https://image.tmdb.org/t/p/w500' + movieData['poster_path'];
+img.setAttribute('id', 'img');
 document.getElementById('div1').appendChild(img);
   
 const release_date = document.createElement("p");
 release_date.innerHTML = 'Release Date:' + movieData['release_date'];
+release_date.setAttribute('id', 'release_date');
 document.getElementById('div1').appendChild(release_date);
   
 const original_title = document.createElement("h1")
@@ -93,31 +94,39 @@ let genres = genre(movieData['genres']);
 console.log(genres);
 const callgenres = document.createElement("p");
 callgenres.innerHTML = '<b>Genres: </b>' + genres;
+callgenres.setAttribute('id', 'genres');
 document.getElementById('div1').appendChild(callgenres);
  
-  //const trailer = document.createElement('iframe')
-  //trailer.innerHTML = movieData['videos[0]']
-  //trailer.src = 'https://www.youtube.com/embed/' + movieData['key'] 
-  //document.getElementById('div1').appendChild(trailer);
+//const trailer = document.createElement('iframe');
+//const trailers = movieData['videos'].results[0];
+//trailer.src = 'https://www.youtube.com/embed/' + trailers['key']; 
+//trailer.src = 'https://www.youtube.com/watch?v=XbqAHN23PaQ&ab_channel=UniversalPicturesAll-Access';
+//console.log(trailer.src)
+//document.getElementById('div1').appendChild(trailer);
 
 const revenue = document.createElement('p')
-revenue.innerHTML = 'Revenue:' + movieData['revenue'] + ' $ USD '
+revenue.innerHTML = 'Revenue:' + '$' + movieData['revenue'] + 'USD';
+revenue.setAttribute('id', 'revenue');
 document.getElementById('div1').appendChild(revenue);
 
 const tagline = document.createElement('h2')
 tagline.innerHTML =  movieData['tagline'] 
+tagline.setAttribute('id', 'tagline');
 document.getElementById('div1').appendChild(tagline);
 
 const popularity = document.createElement('p')
 popularity.innerHTML = '<br>Popularity</br>' + movieData['popularity'] 
+popularity.setAttribute('id', 'popularity');
 document.getElementById('div1').appendChild(popularity);
 
 const vote_average = document.createElement('p')
 vote_average.innerHTML = '<br>Vote Average</br>' + movieData['vote_average'] 
+vote_average.setAttribute('id', 'vote_average');
 document.getElementById('div1').appendChild(vote_average);
 
 const vote_count = document.createElement('p')
 vote_count.innerHTML = '<br>Vote Count</br>' + movieData['vote_count'] 
+vote_count.setAttribute('id', 'vote_count');
 document.getElementById('div1').appendChild(vote_count);
 
 }

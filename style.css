@@ -41,16 +41,34 @@ input {
     background-color: #F1EEE9;
 }
 
-#ratings {
+#genres {
     text-align: right;
+    display: inline-flex;
 }
 
 #overview {
     text-align: right;
 }
 
-.run {
-   text-align: right;
+
+
+
+* {
+    padding: 0px;
+    margin: 0px;
 }
+
+#release_date {
+display: inline-flex;
+}
+
+#vote_count, #vote_average, #popularity, #overview, #genres, #release_date  {
+display: inline-flex;
+}
+
+#img {
+display: inline-block;
+}
+
 
 
