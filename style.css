@@ -1,0 +1,56 @@
+body {
+    background-color: #44276a;
+    background-image: url(https://images.pexels.com/photos/7605490/pexels-photo-7605490.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    color: #F1EEE9;
+    text-align: right;
+}
+
+body > h1 {
+color: #F1EEE9;
+font-family: 'Merriweather', serif;
+font-size: 150px;
+text-align: center;
+
+}
+
+body > label {
+    color: #F1EEE9;
+    font-family: 'Merriweather', serif;
+    font-size: 30px;
+    text-align: center; 
+}
+
+#Movies {
+    background-color: #F1EEE9;
+    font-family: 'Mereriweather', serif;
+    font-size: 25px;
+    text-align: center; 
+}
+
+input {
+    font-family: 'Merriweather', serif;
+    font-size: 25px;
+    text-align: center; 
+    background-color: #F1EEE9;
+}
+
+#ratings {
+    text-align: right;
+}
+
+#overview {
+    text-align: right;
+}
+
+.run {
+   text-align: right;
+}
+
+
