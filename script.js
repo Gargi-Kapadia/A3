@@ -62,75 +62,65 @@ get.addEventListener('click', async (event) => {
 });
 
 function callMovies(movieData) {
-document.getElementById('div1').innerHTML = "";
+ document.getElementById('div1').innerHTML = "";
 
-const runtime = document.createElement("p")
-runtime.innerHTML = 'Runtime:' + movieData['runtime']
-runtime.setAttribute('id', 'runtime');
-document.getElementById('div1').appendChild(runtime); 
+const runtime = document.createElement("p");
+ runtime.innerHTML = 'Runtime:' + movieData['runtime'];
+ runtime.setAttribute('id', 'runtime');
+ document.getElementById('div1').appendChild(runtime); 
  
 const overview = document.createElement("p");
-overview.innerHTML = '<br>Overview</br>' + movieData['overview'];
-overview.setAttribute('id', 'overview');
-document.getElementById('div1').appendChild(overview);
+ overview.innerHTML = '<br>Overview</br>' + movieData['overview'];
+ overview.setAttribute('id', 'overview');
+ document.getElementById('div1').appendChild(overview);
   
 const img = document.createElement("img");
-img.src = 'https://image.tmdb.org/t/p/w500' + movieData['poster_path'];
-img.setAttribute('id', 'img');
-document.getElementById('div1').appendChild(img);
+ img.src = 'https://image.tmdb.org/t/p/w500' + movieData['poster_path'];
+ img.setAttribute('id', 'img');
+ document.getElementById('div1').appendChild(img);
   
 const release_date = document.createElement("p");
-release_date.innerHTML = 'Release Date: ' + movieData['release_date'];
-release_date.setAttribute('id', 'release_date');
-document.getElementById('div1').appendChild(release_date);
+ release_date.innerHTML = 'Release Date: ' + movieData['release_date'];
+ release_date.setAttribute('id', 'release_date');
+ document.getElementById('div1').appendChild(release_date);
   
-const original_title = document.createElement("h1")
-original_title.innerHTML = movieData['original_title']
-original_title.setAttribute('id', 'movietitle');
-document.getElementById('div1').appendChild(original_title);
-  //console.log(movieData['poster_path']);
-  //console.log(movieData.genres);
+const original_title = document.createElement("h1");
+ original_title.innerHTML = movieData['original_title'];
+ original_title.setAttribute('id', 'movietitle');
+ document.getElementById('div1').appendChild(original_title);
 
 let genres = genre(movieData['genres']);
 console.log(genres);
 const callgenres = document.createElement("p");
-callgenres.innerHTML = '<b><pre>Genres<pre/></b>'+ genres;
-callgenres.setAttribute('id', 'genres');
-document.getElementById('div1').appendChild(callgenres);
- 
-//const trailer = document.createElement('iframe');
-//const trailers = movieData['videos'].results[0];
-//trailer.src = 'https://www.youtube.com/embed/' + trailers['key']; 
-//trailer.src = 'https://www.youtube.com/watch?v=XbqAHN23PaQ&ab_channel=UniversalPicturesAll-Access';
-//console.log(trailer.src)
-//document.getElementById('div1').appendChild(trailer);
+ callgenres.innerHTML = '<b><pre>Genres<pre/></b>'+ genres;
+ callgenres.setAttribute('id', 'genres');
+ document.getElementById('div1').appendChild(callgenres);
 
-const revenue = document.createElement('p')
-revenue.innerHTML = '<pre><b>Revenue</b></pre>' + '$' + movieData['revenue'] + '  USD';
-revenue.setAttribute('id', 'revenue');
-document.getElementById('div1').appendChild(revenue);
+const revenue = document.createElement('p');
+ revenue.innerHTML = '<pre><b>Revenue</b></pre>' + '$' + movieData['revenue'] + '  USD';
+ revenue.setAttribute('id', 'revenue');
+ document.getElementById('div1').appendChild(revenue);
 
-const tagline = document.createElement('h2')
-tagline.innerHTML =  movieData['tagline'] 
-tagline.setAttribute('id', 'tagline');
-document.getElementById('div1').appendChild(tagline);
+const tagline = document.createElement('h2');
+ tagline.innerHTML =  movieData['tagline'];
+ tagline.setAttribute('id', 'tagline');
+ document.getElementById('div1').appendChild(tagline);
 
-const popularity = document.createElement('p')
-popularity.innerHTML = '<br>Popularity</br> ' +  movieData['popularity'] 
-popularity.setAttribute('id', 'popularity');
-document.getElementById('div1').appendChild(popularity);
+const popularity = document.createElement('p');
+ popularity.innerHTML = '<br>Popularity</br> ' +  movieData['popularity']; 
+ popularity.setAttribute('id', 'popularity');
+ document.getElementById('div1').appendChild(popularity);
 
-const vote_average = document.createElement('p')
-vote_average.innerHTML = '<br>Vote Average</br> ' + movieData['vote_average'] 
-vote_average.setAttribute('id', 'vote_average');
-document.getElementById('div1').appendChild(vote_average);
+const vote_average = document.createElement('p');
+ vote_average.innerHTML = '<br>Vote Average</br> ' + movieData['vote_average']; 
+ vote_average.setAttribute('id', 'vote_average');
+ document.getElementById('div1').appendChild(vote_average);
 
-const vote_count = document.createElement('p')
-vote_count.innerHTML = '<br>Vote Count</br> ' + movieData['vote_count'] 
-vote_count.setAttribute('id', 'vote_count');
-document.getElementById('div1').appendChild(vote_count);
-
-}
+const vote_count = document.createElement('p');
+ vote_count.innerHTML = '<br>Vote Count</br> ' + movieData['vote_count']; 
+ vote_count.setAttribute('id', 'vote_count');
+ document.getElementById('div1').appendChild(vote_count);
+};
 
 function genre(genresArray) {
   let callgenres = ""
@@ -140,7 +130,7 @@ function genre(genresArray) {
   }
   let result = callgenres.slice(0, callgenres.length - 2) 
   return result
-}
+};
 
 
 const getMovies1 = async () => {
@@ -152,120 +142,110 @@ const movieData = await getData("https://api.themoviedb.org/3/movie/384018", {
   }
   
 });
-return movieData.data;
+  return movieData.data;
 
 }
 
 
 const getMovies2 = async () => {
 const movieData = await getData("https://api.themoviedb.org/3/movie/497698", {
-params: {
-  api_key: "354ab13223b58e3243b70a0085da1b2e",
-  query: "Black Widow",
-  append_to_response: "videos",
- }
-      
+  params: {
+    api_key: "354ab13223b58e3243b70a0085da1b2e",
+    query: "Black Widow",
+    append_to_response: "videos",
+  }     
 });
- return movieData.data;   
+  return movieData.data;   
 }  
+
 
 const getMovies3 = async () => {
 const movieData = await getData("https://api.themoviedb.org/3/movie/634649", {
-      params: {
-        api_key: "354ab13223b58e3243b70a0085da1b2e",
-        query: "Spider Man: No Way Home",
-        append_to_response: "videos",
-      }
-      
-    });
-    return movieData.data;
+  params: {
+    api_key: "354ab13223b58e3243b70a0085da1b2e",
+    query: "Spider Man: No Way Home",
+    append_to_response: "videos",
+  }      
+});
+  return movieData.data;
+} 
 
-  }   
-  const getMovies4 = async () => {
-    const movieData = await getData("https://api.themoviedb.org/3/movie/438148", {
-      params: {
-        api_key: "354ab13223b58e3243b70a0085da1b2e",
-        query: "Minions: The Rise of Gru",
-        append_to_response: "videos",
-      }
-      
-    });
-    return movieData.data;
-  
-  }   
-  const getMovies5 = async () => {
-    const movieData = await getData("https://api.themoviedb.org/3/movie/512195", {
-      params: {
-        api_key: "354ab13223b58e3243b70a0085da1b2e",
-        query: "Red Notice",
-        append_to_response: "videos",
-      }
-      
-    });
-    return movieData.data;
-  
-  }   
-  const getMovies6 = async () => {
-    const movieData = await getData("https://api.themoviedb.org/3/movie/455207", {
-      params: {
-        api_key: "354ab13223b58e3243b70a0085da1b2e",
-        query: "Crazy Rich Asians",
-        append_to_response: "videos",
-      }
-      
-    });
-    return movieData.data;
-  
-  }   
-  const getMovies7 = async () => {
-    const movieData = await getData("https://api.themoviedb.org/3/movie/705861", {
-      params: {
-        api_key: "354ab13223b58e3243b70a0085da1b2e",
-        query: "Hustle",
-        append_to_response: "videos",
-      }
-      
-    });
-    return movieData.data;
-  
-  }   
-  const getMovies8 = async () => {
-    const movieData = await getData("https://api.themoviedb.org/3/movie/772", {
-      params: {
-        api_key: "354ab13223b58e3243b70a0085da1b2e",
-        query: "Home Alone: Lost in New York",
-        append_to_response: "videos",
-      }
-      
-    });
-    return movieData.data;
-  
-  }   
-  const getMovies9 = async () => {
-    const movieData = await getData("https://api.themoviedb.org/3/movie/284054", {
-      params: {
-        api_key: "354ab13223b58e3243b70a0085da1b2e",
-        query: "Black Panther",
-        append_to_response: "videos",
+const getMovies4 = async () => {
+const movieData = await getData("https://api.themoviedb.org/3/movie/438148", {
+  params: {
+    api_key: "354ab13223b58e3243b70a0085da1b2e",
+    query: "Minions: The Rise of Gru",
+    append_to_response: "videos",
+  }     
+});
+  return movieData.data;
+}   
 
-      }
-      
-    });
-    return movieData.data;
-  
-  }   
-  const getMovies10 = async () => {
-    const movieData = await getData("https://api.themoviedb.org/3/movie/864", {
-      params: {
-        api_key: "354ab13223b58e3243b70a0085da1b2e",
-        query: "Cool Runnings",
-        append_to_response: "videos",
-      }
-      
-    });
-    return movieData.data;
-  
-  }  
+const getMovies5 = async () => {
+const movieData = await getData("https://api.themoviedb.org/3/movie/512195", {
+  params: {
+    api_key: "354ab13223b58e3243b70a0085da1b2e",
+    query: "Red Notice",
+    append_to_response: "videos",
+  }      
+});
+  return movieData.data;
+} 
+
+const getMovies6 = async () => {
+const movieData = await getData("https://api.themoviedb.org/3/movie/455207", {
+  params: {
+    api_key: "354ab13223b58e3243b70a0085da1b2e",
+    query: "Crazy Rich Asians",
+    append_to_response: "videos",
+  }
+});
+  return movieData.data;
+}  
+
+const getMovies7 = async () => {
+const movieData = await getData("https://api.themoviedb.org/3/movie/705861", {
+  params: {
+    api_key: "354ab13223b58e3243b70a0085da1b2e",
+    query: "Hustle",
+    append_to_response: "videos",
+  }
+});
+  return movieData.data;
+} 
+
+const getMovies8 = async () => {
+const movieData = await getData("https://api.themoviedb.org/3/movie/772", {
+  params: {
+    api_key: "354ab13223b58e3243b70a0085da1b2e",
+    query: "Home Alone: Lost in New York",
+    append_to_response: "videos",
+  }
+});
+  return movieData.data;
+}  
+
+const getMovies9 = async () => {
+const movieData = await getData("https://api.themoviedb.org/3/movie/284054", {
+  params: {
+    api_key: "354ab13223b58e3243b70a0085da1b2e",
+    query: "Black Panther",
+    append_to_response: "videos",
+  }
+});
+  return movieData.data;
+}   
+
+const getMovies10 = async () => {
+const movieData = await getData("https://api.themoviedb.org/3/movie/864", {
+  params: {
+    api_key: "354ab13223b58e3243b70a0085da1b2e",
+    query: "Cool Runnings",
+    append_to_response: "videos",
+  }
+});
+  return movieData.data;
+}  
   
    const genres = {
     28: 'Action',
@@ -276,7 +256,7 @@ const movieData = await getData("https://api.themoviedb.org/3/movie/634649", {
     18: 'Drama',
     10751: 'Family',
     14: 'Fantasy',
-    9648:'Mystery',
-    10749:'Romance',
+    9648: 'Mystery',
+    10749: 'Romance',
     53: 'Thriller',
   };

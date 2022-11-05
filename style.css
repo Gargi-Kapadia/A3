@@ -14,12 +14,12 @@ p {
 }
 
 body > h1 {
-color: #F1EEE9;
-font-family: 'Merriweather', serif;
-font-size: 100px;
-text-align: center;
-padding-left: 8rem;
-padding-bottom: 1rem;
+    color: #F1EEE9;
+    font-family: 'Merriweather', serif;
+    font-size: 100px;
+    text-align: center;
+    padding-left: 8rem;
+    padding-bottom: 1rem;
 }
 
 body > label {
@@ -92,36 +92,36 @@ input {
 }
 
 #release_date {
-display:flex;
-position: absolute;
-bottom: 380px;
-margin-top: 15em;
-display: inline-block;
-white-space: nowrap;
-margin-left: 1em;
-margin-bottom: 0.5em; 
+    display:flex;
+    position: absolute;
+    bottom: 380px;
+    margin-top: 15em;
+    display: inline-block;
+    white-space: nowrap;
+    margin-left: 1em;
+    margin-bottom: 0.5em; 
 }
 
 #vote_count, #vote_average, #popularity, #overview, #genres, #release_date  {
-display:flex;
+    display:flex;
 }
 
 #img {
-border-radius: 10px;
-display:flex;
-margin-top: 12em;
-margin-left: 1rem;
-position: absolute;
+    border-radius: 10px;
+    display:flex;
+    margin-top: 12em;
+    margin-left: 1rem;
+    position: absolute;
 }
 
 #movietitle {
-font-size: 40px;
-position: absolute;
-top: 15rem;
-margin-left: 1rem;
-color: #F1EEE9;
-padding-bottom: 10px;
-text-transform: Uppercase;
+    font-size: 40px;
+    position: absolute;
+    top: 15rem;
+    margin-left: 1rem;
+    color: #F1EEE9;
+    padding-bottom: 10px;
+    text-transform: Uppercase;
 }
 
 #genres {
