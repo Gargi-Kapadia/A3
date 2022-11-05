@@ -70,7 +70,7 @@ runtime.setAttribute('id', 'runtime');
 document.getElementById('div1').appendChild(runtime); 
  
 const overview = document.createElement("p");
-overview.innerHTML = '<b>Overview: </b>' + movieData['overview'];
+overview.innerHTML = '<br>Overview</br>' + movieData['overview'];
 overview.setAttribute('id', 'overview');
 document.getElementById('div1').appendChild(overview);
   
@@ -80,12 +80,13 @@ img.setAttribute('id', 'img');
 document.getElementById('div1').appendChild(img);
   
 const release_date = document.createElement("p");
-release_date.innerHTML = 'Release Date:' + movieData['release_date'];
+release_date.innerHTML = 'Release Date: ' + movieData['release_date'];
 release_date.setAttribute('id', 'release_date');
 document.getElementById('div1').appendChild(release_date);
   
 const original_title = document.createElement("h1")
 original_title.innerHTML = movieData['original_title']
+original_title.setAttribute('id', 'movietitle');
 document.getElementById('div1').appendChild(original_title);
   //console.log(movieData['poster_path']);
   //console.log(movieData.genres);
@@ -93,7 +94,7 @@ document.getElementById('div1').appendChild(original_title);
 let genres = genre(movieData['genres']);
 console.log(genres);
 const callgenres = document.createElement("p");
-callgenres.innerHTML = '<b>Genres: </b>' + genres;
+callgenres.innerHTML = '<b><pre>Genres<pre/></b>'+ genres;
 callgenres.setAttribute('id', 'genres');
 document.getElementById('div1').appendChild(callgenres);
  
@@ -105,7 +106,7 @@ document.getElementById('div1').appendChild(callgenres);
 //document.getElementById('div1').appendChild(trailer);
 
 const revenue = document.createElement('p')
-revenue.innerHTML = 'Revenue:' + '$' + movieData['revenue'] + 'USD';
+revenue.innerHTML = '<pre><b>Revenue</b></pre>' + '$' + movieData['revenue'] + '  USD';
 revenue.setAttribute('id', 'revenue');
 document.getElementById('div1').appendChild(revenue);
 
@@ -115,17 +116,17 @@ tagline.setAttribute('id', 'tagline');
 document.getElementById('div1').appendChild(tagline);
 
 const popularity = document.createElement('p')
-popularity.innerHTML = '<br>Popularity</br>' + movieData['popularity'] 
+popularity.innerHTML = '<br>Popularity</br> ' +  movieData['popularity'] 
 popularity.setAttribute('id', 'popularity');
 document.getElementById('div1').appendChild(popularity);
 
 const vote_average = document.createElement('p')
-vote_average.innerHTML = '<br>Vote Average</br>' + movieData['vote_average'] 
+vote_average.innerHTML = '<br>Vote Average</br> ' + movieData['vote_average'] 
 vote_average.setAttribute('id', 'vote_average');
 document.getElementById('div1').appendChild(vote_average);
 
 const vote_count = document.createElement('p')
-vote_count.innerHTML = '<br>Vote Count</br>' + movieData['vote_count'] 
+vote_count.innerHTML = '<br>Vote Count</br> ' + movieData['vote_count'] 
 vote_count.setAttribute('id', 'vote_count');
 document.getElementById('div1').appendChild(vote_count);
 
@@ -277,4 +278,5 @@ const movieData = await getData("https://api.themoviedb.org/3/movie/634649", {
     14: 'Fantasy',
     9648:'Mystery',
     10749:'Romance',
+    53: 'Thriller',
   };

@@ -3,7 +3,8 @@ body {
     background-image: url(https://images.pexels.com/photos/7605490/pexels-photo-7605490.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
     background-size: cover;
     background-repeat: no-repeat;
-
+    max-width: 1280px;
+    max-height: 1024px;
 }
 
 p {
@@ -15,41 +16,73 @@ p {
 body > h1 {
 color: #F1EEE9;
 font-family: 'Merriweather', serif;
-font-size: 150px;
+font-size: 100px;
 text-align: center;
-
+padding-left: 8rem;
+padding-bottom: 1rem;
 }
 
 body > label {
+    display: flex;
     color: #F1EEE9;
     font-family: 'Merriweather', serif;
     font-size: 30px;
     text-align: center; 
+    justify-content: center;
+    position: relative;
+    left: 35rem;
 }
 
-#Movies {
-    background-color: #F1EEE9;
-    font-family: 'Mereriweather', serif;
-    font-size: 25px;
-    text-align: center; 
+body > label, input, #Movies {
+    display: inline;
 }
 
-input {
+
+input, #Movies {
+    display: flex;
     font-family: 'Merriweather', serif;
     font-size: 25px;
     text-align: center; 
+    justify-content: center;
     background-color: #F1EEE9;
+    position: absolute;
+    left: 30rem;
+}
+
+input {
+    position: absolute;
 }
 
 #genres {
+    display: flex;
     text-align: right;
     display: inline-flex;
 }
 
 #overview {
-    text-align: right;
+    text-align: left;
+    align-items: right;
+    justify-content: right;
+    gap: 1rem;
+    overflow-wrap: break-word;
+    margin-left: 45%;
+    padding-top: 11.5em;
+    float: right;
+    
 }
 
+#tagline {
+    text-align: left;
+    align-items: top;
+    justify-content: left;
+    float: left;
+    color: #F1EEE9;
+    margin-left: 1em;
+    position: absolute;
+    bottom: 580px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: lighter;
+}
 
 
 
@@ -59,16 +92,121 @@ input {
 }
 
 #release_date {
-display: inline-flex;
+display:flex;
+position: absolute;
+bottom: 380px;
+margin-top: 15em;
+display: inline-block;
+white-space: nowrap;
+margin-left: 1em;
+margin-bottom: 0.5em; 
 }
 
 #vote_count, #vote_average, #popularity, #overview, #genres, #release_date  {
-display: inline-flex;
+display:flex;
 }
 
 #img {
-display: inline-block;
+border-radius: 10px;
+display:flex;
+margin-top: 12em;
+margin-left: 1rem;
+position: absolute;
 }
 
+#movietitle {
+font-size: 40px;
+position: absolute;
+top: 15rem;
+margin-left: 1rem;
+color: #F1EEE9;
+padding-bottom: 10px;
+text-transform: Uppercase;
+}
+
+#genres {
+    font-size: 15px;
+    text-align: left;
+    float: right;
+    position: absolute;
+    margin-top:26em;
+    margin-left: 45%;
 
 
+}
+
+#revenue {
+    font-size: 15px;
+    position: relative;
+    padding-top: 30.5%;
+    padding-right: 1em;
+
+}
+
+#runtime {
+    display:flex;
+    position: absolute;
+    bottom: 380px;
+    margin-top: 15em;
+    display: inline-block;
+    margin-left: 26em; 
+    margin-bottom: 0.5em; 
+}
+
+#vote_count, #vote_average, #popularity {
+    display: inline;
+    display: inline-block;
+    align-content: right;
+    justify-content: right;
+    position: relative; top: 40px;
+    line-height: 12px;
+    white-space: nowrap;
+    text-align: center;
+    color:#F1EEE9;
+}
+
+#vote_count {
+    padding: 5px;
+    margin: 0px;
+    background-color: #d38806;
+    border-radius: 1em;
+    border-spacing: 1em;
+    position: relative; left: 590px;
+
+}
+
+#vote_count:hover {
+    background-color: gray;
+}
+
+#vote_average {
+    padding: 5px;
+    margin: 0px;
+    background-color: #d38806;
+    border-radius: 1em;
+    border-spacing: 1em;
+    position: relative; left: 580px;
+
+}
+
+#vote_average:hover {
+    background-color: gray;
+}
+
+#popularity {
+    padding: 5px;
+    margin: 0px;
+    background-color: #d38806;
+    border-radius: 1em;
+    border-spacing: 1em;
+    position: relative; left: 570px;
+
+}
+
+#popularity:hover {
+    background-color: gray;
+}
+
+#release_date, #runtime {
+    bottom: 510px;
+}
