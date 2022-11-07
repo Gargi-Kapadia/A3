@@ -65,7 +65,7 @@ function callMovies(movieData) {
  document.getElementById('div1').innerHTML = "";
 
 const runtime = document.createElement("p");
- runtime.innerHTML = 'Runtime:' + movieData['runtime'];
+ runtime.innerHTML = 'Runtime: ' + movieData['runtime'];
  runtime.setAttribute('id', 'runtime');
  document.getElementById('div1').appendChild(runtime); 
  
@@ -259,4 +259,5 @@ const movieData = await getData("https://api.themoviedb.org/3/movie/864", {
     9648: 'Mystery',
     10749: 'Romance',
     53: 'Thriller',
+    878: 'Science Fiction',
   };

@@ -22,7 +22,7 @@ body > h1 {
     padding-bottom: 1rem;
 }
 
-body > label {
+body> label {
     display: flex;
     color: #F1EEE9;
     font-family: 'Merriweather', serif;
@@ -47,16 +47,11 @@ input, #Movies {
     background-color: #F1EEE9;
     position: absolute;
     left: 30rem;
+    bottom: 530px;
 }
 
 input {
     position: absolute;
-}
-
-#genres {
-    display: flex;
-    text-align: right;
-    display: inline-flex;
 }
 
 #overview {
@@ -67,8 +62,7 @@ input {
     overflow-wrap: break-word;
     margin-left: 45%;
     padding-top: 11.5em;
-    float: right;
-    
+    float: right;   
 }
 
 #tagline {
@@ -79,7 +73,7 @@ input {
     color: #F1EEE9;
     margin-left: 1em;
     position: absolute;
-    bottom: 580px;
+    bottom: 445px;
     font-family: 'Quicksand', sans-serif;
     font-weight: lighter;
 }
@@ -94,16 +88,11 @@ input {
 #release_date {
     display:flex;
     position: absolute;
-    bottom: 380px;
     margin-top: 15em;
     display: inline-block;
     white-space: nowrap;
     margin-left: 1em;
-    margin-bottom: 0.5em; 
-}
-
-#vote_count, #vote_average, #popularity, #overview, #genres, #release_date  {
-    display:flex;
+    margin-bottom: -7.5em; 
 }
 
 #img {
@@ -125,12 +114,15 @@ input {
 }
 
 #genres {
+    display: flex;
+    text-align: right;
+    display: inline-flex;
     font-size: 15px;
     text-align: left;
     float: right;
     position: absolute;
     margin-top:26em;
-    margin-left: 45%;
+    margin-left: 38.5%;
 
 
 }
@@ -146,11 +138,10 @@ input {
 #runtime {
     display:flex;
     position: absolute;
-    bottom: 380px;
     margin-top: 15em;
     display: inline-block;
     margin-left: 26em; 
-    margin-bottom: 0.5em; 
+    margin-bottom: -7.5em; 
 }
 
 #vote_count, #vote_average, #popularity {
